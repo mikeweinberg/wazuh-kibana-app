@@ -17,7 +17,10 @@ import {
   EuiLoadingSpinner,
   EuiProgress,
   EuiBasicTable,
-  EuiButtonIcon
+  EuiButtonIcon,
+  EuiTabs,
+  EuiTab,
+  EuiSpacer
 } from '@elastic/eui';
 
 const app = uiModules.get('app/wazuh', ['react']);
@@ -28,4 +31,7 @@ app
   .value('EuiLoadingSpinner', EuiLoadingSpinner)
   .value('EuiProgress', EuiProgress)
   .value('EuiButtonIcon', EuiButtonIcon)
-  .value('EuiBasicTable', EuiBasicTable);
+  .value('EuiBasicTable', EuiBasicTable)
+  .value('EuiTab', EuiTab)
+  .value('EuiTabs', EuiTabs)
+  .value('EuiSpacer', EuiSpacer);
