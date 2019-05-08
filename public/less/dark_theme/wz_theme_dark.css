@@ -1,0 +1,40 @@
+.euiHeaderSectionItem__button,
+.euiListGroupItem__icon {
+  color: #dfe5ef;
+}
+
+.euiToolTipAnchor {
+  color: white;
+}
+
+.app-wrapper-panel {
+  background-color: #1a1b20;
+}
+
+.wz-metric-color {
+  background-color: #343741 !important;
+  border: 1px solid #131417;
+  color: white;
+}
+
+.euiBreadcrumbs--truncate
+  .euiBreadcrumb:not(.euiBreadcrumb--collapsed).euiBreadcrumb--last,
+.euiNavDrawerGroup__item .euiListGroupItem__label,
+.euiNavDrawer .euiNavDrawer__expandButton .euiListGroupItem__button {
+  color: #dfe5ef;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Inter UI';
+}
+
+.wz-menu-content {
+  background-color: #002835;
+}
+
+.wz-menu-button.wz-menu-active {
+  background-color: #1a1b20 !important;
+}
+
+.wz-menu-button:not([disabled]):hover {
+  background-color: #013343;
+}

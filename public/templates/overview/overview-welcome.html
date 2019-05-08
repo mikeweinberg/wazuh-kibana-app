@@ -37,7 +37,7 @@
                             card-title="'Integrity monitoring'" switch-tab="octrl.switchTab('fim')" current-tab="'fim'"
                             description="octrl.TabDescription.fim.description" />
                         <wz-welcome-card ng-if="octrl.extensions.aws" class="euiFlexItem"
-                            logo="'icons/app_index_pattern.svg'" card-title="'Amazon AWS'"
+                            icon="'logoAWS'" card-title="'Amazon AWS'"
                             switch-tab="octrl.switchTab('aws')" current-tab="'aws'"
                             description="octrl.TabDescription.aws.description" />
                     </div>
@@ -77,7 +77,7 @@
             <div class="euiFlexItem">
                 <div class="euiFlexItem">
                     <div class="euiPanel euiPanel--paddingLarge">
-                        <h3 class="euiTitle wzEuiTitle font-size-20">Threat Detection and Response</h3>
+                        <h3 class="euiTitle euiTitle--small font-size-20">Threat Detection and Response</h3>
                         <div class="euiSpacer euiSpacer--m"></div>
                         <div class="euiFlexGrid euiFlexGrid--gutterLarge euiFlexGrid--halves">
                             <wz-welcome-card class="euiFlexItem" icon="'grokApp'"
@@ -101,7 +101,7 @@
             </div>
             <div class="euiFlexItem" ng-if="octrl.extensions && (octrl.extensions.pci || octrl.extensions.gdpr)">
                 <div class="euiPanel euiPanel--paddingLarge">
-                    <h3 class="euiTitle wzEuiTitle font-size-20">Regulatory Compliance</h3>
+                    <h3 class="euiTitle euiTitle--small font-size-20">Regulatory Compliance</h3>
                     <div class="euiSpacer euiSpacer--m"></div>
                     <div class="euiFlexGrid euiFlexGrid--gutterLarge euiFlexGrid--halves">
                         <wz-welcome-card ng-if="octrl.extensions.pci" class="euiFlexItem" icon="'editorAlignCenter'"
