@@ -5,7 +5,7 @@
 
 
     <div layout="row">
-        <md-card flex class="wz-md-card wz-metric-color">
+        <md-card flex class="wz-md-card euiCard wz-metric-color">
             <md-card-content layout="row" class="wz-padding-metric">
                 <div flex>Total malicious: <span class="wz-text-bold" ng-bind="virusMalicious()"></span></div>
                 <div flex>Total positives: <span class="wz-text-bold" ng-bind="virusPositives()"></span></div>
@@ -21,7 +21,7 @@
     </div>
 
     <div layout="row" class="height-250">
-        <md-card flex="33" class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
+        <md-card flex="33" class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(0)">
                 <span class="wz-headline-title">Last scanned files</span>
@@ -30,12 +30,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Virustotal-Last-Files-Pie" vis-id="'Wazuh-App-Agents-Virustotal-Last-Files-Pie'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card">
-            <md-card-content class="wazuh-column" ng-class="{'fullscreen': expandArray[1]}">
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content wazuh-column" ng-class="{'fullscreen': expandArray[1]}">
                 <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                     ng-dblclick="expand(1)">
                     <span class="wz-headline-title">Malicious files alerts Evolution</span>
@@ -49,7 +49,7 @@
         </md-card>
     </div>
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(2)">
                 <span class="wz-headline-title">Last files</span>
@@ -58,7 +58,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Virustotal-Files-Table" vis-id="'Wazuh-App-Agents-Virustotal-Files-Table'"></kbn-vis>
             </md-card-content>
         </md-card>

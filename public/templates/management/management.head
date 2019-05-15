@@ -7,30 +7,51 @@
     <!-- Navigation section -->
     <div layout="row" layout-align="start center" ng-if="mctrl.tab !== 'monitoring' && mctrl.tab !== 'configuration'">
         <!-- Breadcrumbs -->
-        <div layout="row" layout-padding>
+        <div layout="row" layout-padding class="euiBreadcrumbs no-margin-left euiHeaderBreadcrumbs euiBreadcrumbs--truncate euiBreadcrumbs--responsive">
             <!-- If you're not on the Welcome tab, show a functional breadcrumb -->
             <div
                 ng-if="mctrl.tab !== 'welcome' && !mctrl.currentGroup && !mctrl.currentRule && !mctrl.currentDecoder && !mctrl.currentList">
-                <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome', true)">Management</span>
-                <span> / {{ mctrl.tabNames[mctrl.tab] }}</span>
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.switchTab('welcome', true)">Management</span>
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiBreadcrumb euiBreadcrumb--last">{{ mctrl.tabNames[mctrl.tab] }}</span>
             </div>
             <div
                 ng-if="mctrl.tab !== 'welcome' && !mctrl.currentGroup && (mctrl.currentRule || mctrl.currentDecoder || mctrl.currentList)">
-                <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome', true)">Management</span>
-                <span class="wz-text-link cursor-pointer" ng-click="mctrl.breadCrumbBack(true);"> /
-                    {{ mctrl.tabNames[mctrl.tab] }}</span>
-                <span ng-show="mctrl.currentRule"><span class="wz-text-link cursor-pointer"
-                        ng-click="mctrl.breadCrumbBack()"> / rules</span> / {{mctrl.currentRule.id}}</span>
-                <span ng-show="mctrl.currentDecoder"><span class="wz-text-link cursor-pointer"
-                        ng-click="mctrl.breadCrumbBack()"> / decoders</span> / {{mctrl.currentDecoder.name}}</span>
-                <span ng-show="mctrl.currentList"><span class="wz-text-link cursor-pointer"
-                        ng-click="mctrl.breadCrumbBack()"> / lists</span> / {{mctrl.currentList.name}}</span>
+
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.switchTab('welcome', true)">Management</span>
+
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.breadCrumbBack(true);">{{ mctrl.tabNames[mctrl.tab] }}</span>
+                
+                <div ng-show="mctrl.currentRule">
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.breadCrumbBack()"> rules</span>
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiBreadcrumb euiBreadcrumb--last">{{mctrl.currentRule.id}}</span>
+                </div>
+                
+                <div ng-show="mctrl.currentDecoder">                    
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.breadCrumbBack()">decoders</span>
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiBreadcrumb euiBreadcrumb--last">{{mctrl.currentDecoder.name}}</span>
+                </div>
+                
+                <div ng-show="mctrl.currentList">                
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.breadCrumbBack()">lists</span>
+                    <div class="euiBreadcrumbSeparator"></div>
+                    <span class="euiBreadcrumb euiBreadcrumb--last">{{mctrl.currentList.name}}</span>
+                </div>
+
             </div>
             <div ng-if="mctrl.tab === 'groups' && mctrl.currentGroup && mctrl.currentGroup.name">
-                <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('welcome', true)">Management</span>
-                <span class="wz-text-link cursor-pointer" ng-click="mctrl.switchTab('groups', true)"> /
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.switchTab('welcome', true)">Management</span>
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb" ng-click="mctrl.switchTab('groups', true)">
                     {{ mctrl.tabNames[mctrl.tab] }}</span>
-                <span> / {{ mctrl.currentGroup.name }} </span>
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiBreadcrumb euiBreadcrumb--last">{{ mctrl.currentGroup.name }} </span>
             </div>
         </div>
         <!-- End breadcrumbs -->
@@ -39,21 +60,22 @@
         <div layout-padding class="euiFlexGroup">
 
             <div layout="row" ng-if="!mctrl.currentConfiguration && mctrl.editionTab !== 'editconfiguration'"
-                class="euiFlexItem">
-                <span class="wz-text-link cursor-pointer euiBreadcrumb"
+                 class="euiBreadcrumbs no-margin-left euiHeaderBreadcrumbs euiBreadcrumbs--truncate euiBreadcrumbs--responsive">
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb"
                     ng-click="mctrl.switchTab('welcome', true)">Management</span>
-                <span class="euiBreadcrumb"> / </span>
-                <span>{{ mctrl.tabNames[mctrl.tab] }}</span>
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiBreadcrumb euiBreadcrumb--last">{{ mctrl.tabNames[mctrl.tab] }}</span>
             </div>
 
             <div layout="row" ng-if="mctrl.currentConfiguration || mctrl.editionTab === 'editconfiguration'"
-                class="euiFlexItem">
-                <span class="wz-text-link cursor-pointer euiBreadcrumb"
+                class="euiBreadcrumbs no-margin-left euiHeaderBreadcrumbs euiBreadcrumbs--truncate euiBreadcrumbs--responsive">
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb"
                     ng-click="mctrl.switchTab('welcome', true)">Management</span>
-                <span class="euiBreadcrumb"> / </span>
-                <span class="wz-text-link cursor-pointer euiBreadcrumb"
-                    ng-click="mctrl.switchTab('configuration', true)">{{ mctrl.tabNames[mctrl.tab] }}</span>
-                <span ng-if="mctrl.editionTab !== 'editconfiguration'"> /
+                <div class="euiBreadcrumbSeparator"></div>
+                <span class="euiLink euiLink--subdued cursor-pointer euiBreadcrumb"
+                    ng-click="mctrl.switchTab('configuration', true)">{{ mctrl.tabNames[mctrl.tab] }}</span>                
+                <div class="euiBreadcrumbSeparator" ng-if="mctrl.editionTab !== 'editconfiguration'"></div>
+                <span ng-if="mctrl.editionTab !== 'editconfiguration'" class="euiBreadcrumb euiBreadcrumb--last">
                     {{ mctrl.tabNames[mctrl.currentConfiguration] || mctrl.currentConfiguration }} </span>
             </div>
 

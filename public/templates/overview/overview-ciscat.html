@@ -50,8 +50,8 @@
 
     <!-- Top groups and result evolution section -->
     <div layout="row" layout-align="start stretch" class="height-320">
-        <md-card flex="60" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="60" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(0)">
                     <span class="wz-headline-title">Top 5 CIS-CAT groups</span>
                     <span flex></span>
@@ -64,8 +64,8 @@
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(1)">
                     <span class="wz-headline-title">Scan result evolution</span>
                     <span flex></span>
@@ -83,8 +83,8 @@
 
     <!-- Alerts summary table section -->
     <div layout="row" layout-align="start stretch" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(2)">
                     <span class="wz-headline-title">Alerts summary</span>
                     <span flex></span>

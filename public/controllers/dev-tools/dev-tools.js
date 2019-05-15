@@ -15,6 +15,7 @@ import { ExcludedIntelliSenseTriggerKeys } from '../../../util/excluded-devtools
 import queryString from 'querystring-browser';
 import $ from 'jquery';
 import * as FileSaver from '../../services/file-saver';
+import chrome from 'ui/chrome';
 export class DevToolsController {
   /**
    * Constructor
@@ -45,6 +46,7 @@ export class DevToolsController {
     this.linesWithClass = [];
     this.widgets = [];
     this.multipleKeyPressed = [];
+    this.IS_DARK_THEME = chrome.getUiSettingsClient().get('theme:darkMode');
   }
 
   /**
@@ -76,7 +78,7 @@ export class DevToolsController {
         lineNumbers: true,
         matchBrackets: true,
         mode: { name: 'javascript', json: true },
-        theme: 'ttcn',
+        theme: this.IS_DARK_THEME ? 'lesser-dark' : 'ttcn',
         foldGutter: true,
         styleSelectedText: true,
         gutters: ['CodeMirror-foldgutter']
@@ -119,7 +121,7 @@ export class DevToolsController {
         readOnly: true,
         lineWrapping: true,
         styleActiveLine: true,
-        theme: 'ttcn',
+        theme: this.IS_DARK_THEME ? 'lesser-dark' : 'ttcn',
         foldGutter: true,
         gutters: ['CodeMirror-foldgutter']
       }

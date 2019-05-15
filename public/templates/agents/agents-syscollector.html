@@ -1,8 +1,8 @@
 <md-content layout="column" ng-if="tab === 'syscollector'" ng-show="!load" class="">
 
     <div layout="row" class="layout-padding" ng-if="agent && agent.status !== 'Active'">
-        <md-card flex class="wz-md-card" flex>
-            <md-card-content class="wz-text-center">
+        <md-card flex class="wz-md-card euiCard" flex>
+            <md-card-content class="euiCard__content wz-text-center">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Agent is not
                     connected.</span>
             </md-card-content>
@@ -10,8 +10,8 @@
     </div>
 
     <div layout="row" class="layout-padding" ng-if="agent && agent.status === 'Active' && !hasSize(syscollector)">
-        <md-card flex class="wz-md-card" flex>
-            <md-card-content class="wz-text-center">
+        <md-card flex class="wz-md-card euiCard" flex>
+            <md-card-content class="euiCard__content wz-text-center">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Could not
                     fetch inventory for this agent.</span>
             </md-card-content>
@@ -20,8 +20,8 @@
 
     <div layout="row" class="layout-padding wz-padding-bottom-0"
         ng-if="agent && agent.status === 'Active' && hasSize(syscollector) && (!hasSize(syscollector.hardware) || !hasSize(syscollector.os))">
-        <md-card flex class="wz-md-card" flex>
-            <md-card-content class="wz-text-center">
+        <md-card flex class="wz-md-card euiCard" flex>
+            <md-card-content class="euiCard__content wz-text-center">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Not enough
                     hardware or operating system information</span>
             </md-card-content>
@@ -53,8 +53,8 @@
     </div>
 
     <div layout="row" class="layout-padding" ng-if="agent && agent.status === 'Active' && hasSize(syscollector)">
-        <md-card flex class="wz-md-card">
-            <md-card-content class="wz-text-center"
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content wz-text-center"
                 ng-if="!syscollector.netiface || !syscollector.netiface.items || !syscollector.netiface.items.length">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">No
                     interfaces scan available</span>
@@ -105,8 +105,8 @@
                 </table>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card">
-            <md-card-content class="wz-text-center" ng-if="syscollector.ports && !syscollector.ports.items.length">
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content wz-text-center" ng-if="syscollector.ports && !syscollector.ports.items.length">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">No ports
                     scan available</span>
             </md-card-content>
@@ -128,8 +128,8 @@
     </div>
 
     <div layout="row" class="layout-padding" ng-if="agent && agent.status === 'Active' && hasSize(syscollector)">
-        <md-card flex class="wz-md-card">
-            <md-card-content class="wz-text-center"
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content wz-text-center"
                 ng-if="!syscollector.netaddr || !syscollector.netaddr.items || !syscollector.netaddr.items.length">
                 <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">No network
                     addresses scan available</span>
@@ -146,8 +146,8 @@
     </div>
 
     <div layout="row" class="layout-padding" ng-if="agent && agent.status === 'Active' && hasSize(syscollector)">
-        <md-card flex class="wz-md-card">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content">
                 <span class="wz-headline-title">
                     <react-component name="EuiIcon" props="{type:'apps'}" /> Packages</span>
                 <span class="color-grey pull-right">Last scan: {{syscollector.packagesDate}}</span>
@@ -193,8 +193,8 @@
 
     <div layout="row" class="layout-padding wz-padding-top-0"
         ng-if="agent && agent.status === 'Active' && hasSize(syscollector)">
-        <md-card flex class="wz-md-card">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content">
                 <span class="wz-headline-title">
                     <react-component name="EuiIcon" props="{type:'console'}" /> Processes</span>
                 <span class="color-grey pull-right">Last scan: {{syscollector.processesDate}}</span>

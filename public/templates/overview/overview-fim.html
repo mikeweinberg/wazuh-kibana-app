@@ -2,7 +2,7 @@
     ng-class="{'no-opacity': resultState !== 'ready' || !rendered}">
 
     <div layout="row" class="height-400">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(0)">
                 <span class="wz-headline-title">Alerts by action over time</span>
                 <span flex></span>
@@ -10,14 +10,14 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-FIM-Alerts-by-action-over-time"
                     vis-id="'Wazuh-App-Agents-FIM-Alerts-by-action-over-time'"></kbn-vis>
             </md-card-content>
         </md-card>
     </div>
     <div layout="row" class="height-300">
-        <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
+        <md-card flex="25" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(1)">
                 <span class="wz-headline-title">Top 5 agents</span>
                 <span flex></span>
@@ -25,12 +25,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-FIM-Top-5-agents-pie"
                     vis-id="'Wazuh-App-Overview-FIM-Top-5-agents-pie'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(2)">
                 <span class="wz-headline-title">Events summary</span>
                 <span flex></span>
@@ -38,7 +38,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-FIM-Events-summary" vis-id="'Wazuh-App-Overview-FIM-Events-summary'">
                 </kbn-vis>
             </md-card-content>
@@ -46,7 +46,7 @@
     </div>
 
     <div layout="row" class="height-300">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[3]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(3)">
                 <span class="wz-headline-title">Rule distribution</span>
                 <span flex></span>
@@ -54,12 +54,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Overview-FIM-Top-5-rules'"></kbn-vis>
             </md-card-content>
         </md-card>
 
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[4]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(4)">
                 <span class="wz-headline-title">Actions</span>
                 <span flex></span>
@@ -67,12 +67,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-FIM-Common-actions" vis-id="'Wazuh-App-Overview-FIM-Common-actions'">
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[5]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[5]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(5)">
                 <span class="wz-headline-title">Top 5 users</span>
                 <span flex></span>
@@ -80,7 +80,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Overview-FIM-top-agents-user'"></kbn-vis>
             </md-card-content>
         </md-card>

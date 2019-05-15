@@ -27,8 +27,8 @@
             ng-if="currentConfig['integrator-integration'] && !isString(currentConfig['integrator-integration'])">
 
             <!-- VirusTotal integration card -->
-            <md-card class="wz-md-card" ng-if="!JSONContent && !XMLContent">
-                <md-card-content>
+            <md-card class="wz-md-card euiCard" ng-if="!JSONContent && !XMLContent">
+                <md-card-content class="euiCard__content">
                     <div layout="row" layout-align="start center">
                         <div ng-if="integrations['virustotal']">
                             <span class="font-size-16">VirusTotal</span>

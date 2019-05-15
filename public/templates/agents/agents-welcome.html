@@ -1,7 +1,7 @@
 <div layout="column" class="" layout-align="start stretch" ng-if="tab === 'welcome'" ng-show="!load && !agent">
     <div layout="row" class="layout-padding">
-        <md-card flex class="wz-md-card" flex>
-            <md-card-content class="wz-text-center">
+        <md-card flex class="wz-md-card euiCard" flex>
+            <md-card-content class="euiCard__content wz-text-center">
                 <div layout="row" layout-padding>
                     <i class="fa fa-fw fa-info-circle" aria-hidden="true"></i> <span class="wz-headline-title">Could
                         not fetch data for this agent. <span ng-if="emptyAgent">Reason: {{emptyAgent}}</span></span>
@@ -47,8 +47,8 @@
     </div>
     <!-- End headline -->
     <div layout="row" layout-padding class="agents-headline">
-        <md-card flex class="wz-md-card wz-padding-top-0 wz-padding-bottom-0">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard wz-padding-top-0 wz-padding-bottom-0">
+            <md-card-content class="euiCard__content">
                 <div
                     class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive">
                     <div class="euiFlexItem euiFlexItem--flexGrowZero">
@@ -141,8 +141,8 @@
         </md-card>
     </div>
     <div layout="row" layout-padding class="wz-padding-bottom-0 wz-padding-top-0" ng-if="agent.group">
-        <md-card flex class="wz-md-card wz-padding-top-0 wz-padding-bottom-0 wz-no-top-bottom-margin">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard wz-padding-top-0 wz-padding-bottom-0 wz-no-top-bottom-margin">
+            <md-card-content class="euiCard__content">
 
                 <div layout="row">
                     <span class="font-size-16">Groups 

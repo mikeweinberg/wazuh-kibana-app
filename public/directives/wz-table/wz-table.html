@@ -210,7 +210,7 @@
                 ng-click="expandTableRow(item)">
                 <td colspan="{{keys.length}}" style="border-top: none">
                     <div layout="row" layout-padding="" class="layout-padding layout-row">
-                        <md-card flex="" class="wz-md-card wz-padding-top-0 wz-padding-bottom-0 wz-no-margin _md flex">
+                        <md-card flex="" class="wz-md-card euiCard wz-padding-top-0 wz-padding-bottom-0 wz-no-margin _md flex">
                             <md-card-content ng-click="$event.stopPropagation()">
                                 <div>
                                     <div class="euiFlexItem euiFlexItem--flexGrowZero" ng-if="item.reason">
@@ -359,8 +359,8 @@
                 ng-click="expandTableRow(item)">
                 <td colspan="{{keys.length}}" style="border-top: none">
                     <div layout="row" layout-padding="" class="layout-padding layout-row" ng-if="item.expanded">
-                        <md-card flex="" class="wz-md-card wz-padding-top-0 wz-padding-bottom-0 wz-no-margin _md flex">
-                            <md-card-content>
+                        <md-card flex="" class="wz-md-card euiCard wz-padding-top-0 wz-padding-bottom-0 wz-no-margin _md flex">
+                            <md-card-content class="euiCard__content">
                                 <div layout="row" class="wz-padding-top-10">
                                     <react-component name="EuiBasicTable" props="getSyscheckRowProps(item)" />
                                 </div>

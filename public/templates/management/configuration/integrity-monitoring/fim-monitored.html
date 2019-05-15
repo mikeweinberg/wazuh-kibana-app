@@ -6,8 +6,8 @@
 <!-- End no configuration section -->
 
 <!-- Monitored card -->
-<md-card class="wz-md-card height-full" ng-if="!JSONContent && !XMLContent && configurationSubTab === 'fim-monitored' && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && currentConfig['syscheck-syscheck'].syscheck.directories && currentConfig['syscheck-syscheck'].syscheck.directories.length">
-    <md-card-content class="height-full">
+<md-card class="wz-md-card euiCard height-full" ng-if="!JSONContent && !XMLContent && configurationSubTab === 'fim-monitored' && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && currentConfig['syscheck-syscheck'].syscheck.directories && currentConfig['syscheck-syscheck'].syscheck.directories.length">
+    <md-card-content class="euiCard__content height-full">
         <div layout="row" layout-align="start center">
             <div>
                 <span class="font-size-16">Monitored directories</span>
@@ -134,8 +134,8 @@
 <!-- End no configuration section -->
 
 <!-- Windows card -->
-<md-card class="wz-md-card" ng-if="((agent || {}).os || {}).platform === 'windows' && configurationSubTab === 'fim-monitored' && !JSONContent && !XMLContent && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && (currentConfig['syscheck-syscheck'].syscheck.registry || currentConfig['syscheck-syscheck'].syscheck.registry_ignore)">
-    <md-card-content>
+<md-card class="wz-md-card euiCard" ng-if="((agent || {}).os || {}).platform === 'windows' && configurationSubTab === 'fim-monitored' && !JSONContent && !XMLContent && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && (currentConfig['syscheck-syscheck'].syscheck.registry || currentConfig['syscheck-syscheck'].syscheck.registry_ignore)">
+    <md-card-content class="euiCard__content">
         <div layout="row" layout-align="start center">
             <div>
                 <span class="font-size-16">Monitored</span>

@@ -6,9 +6,9 @@
         <div layout="column" layout-padding
             ng-show="editctrl.clusterStatus.data.data.enabled === 'yes' && editctrl.clusterStatus.data.data.running === 'yes' ">
             <div layout="row">
-                <span class="font-size-18">
-                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Cluster configuration
-                </span>
+                <h2 class="euiTitle euiTitle--small">
+                    <react-component name="EuiIcon" props="{type:'gear', size:'m'}" /> Cluster configuration
+                </h2>
             </div>
         </div>
 
@@ -16,9 +16,9 @@
         <div layout="column" layout-padding
             ng-show="editctrl.clusterStatus.data.data.enabled !== 'yes' || editctrl.clusterStatus.data.data.running !== 'yes' ">
             <div layout="row">
-                <span class="font-size-18">
-                    <react-component name="EuiIcon" props="{type:'gear', size:'l'}" /> Manager configuration
-                </span>
+                <h2 class="euiTitle euiTitle--small">
+                    <react-component name="EuiIcon" props="{type:'gear', size:'m'}" /> Manager configuration
+                </h2>
             </div>
         </div>
         <!-- End headline -->
@@ -99,8 +99,8 @@
                 <div class="md-padding md-padding-top-10"
                     ng-if="!editctrl.fetchedXML && editctrl.failedNode">
                     <div flex layout="row" layout-align="center center">
-                        <md-card flex="50" class="wz-md-card" flex>
-                            <md-card-content class="wz-text-center">
+                        <md-card flex="50" class="wz-md-card euiCard" flex>
+                            <md-card-content class="euiCard__content wz-text-center">
                                 <span class="wz-headline-title">
                                     <react-component name="EuiIcon" props="{type: 'alert'}" /> Wazuh manager not
                                     reachable.

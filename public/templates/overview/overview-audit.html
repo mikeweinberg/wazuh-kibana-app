@@ -2,8 +2,8 @@
     ng-class="{'no-opacity': resultState !== 'ready' || !rendered}" layout-align="space-around">
 
     <div layout="row" layout-align="center stretch" class="height-250">
-        <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="25" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(0)">
                     <span class="wz-headline-title">Groups</span>
                     <span flex></span>
@@ -15,8 +15,8 @@
                 <kbn-vis id="Wazuh-App-Overview-Audit-Groups" vis-id="'Wazuh-App-Overview-Audit-Groups'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="25" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(1)">
                     <span class="wz-headline-title">Agents</span>
                     <span flex></span>
@@ -28,8 +28,8 @@
                 <kbn-vis id="Wazuh-App-Overview-Audit-Agents" vis-id="'Wazuh-App-Overview-Audit-Agents'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="25" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(2)">
                     <span class="wz-headline-title">Commands</span>
                     <span flex></span>
@@ -42,8 +42,8 @@
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex="25" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="25" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[3]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(3)">
                     <span class="wz-headline-title">Files</span>
                     <span flex></span>
@@ -58,8 +58,8 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-310">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[4]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(4)">
                     <span class="wz-headline-title">Alerts over time</span>
                     <span flex></span>
@@ -75,8 +75,8 @@
     </div>
 
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[10]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[10]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(10)">
                     <span class="wz-headline-title">Alerts summary</span>
                     <span flex></span>

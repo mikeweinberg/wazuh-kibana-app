@@ -5,7 +5,7 @@
 
 
     <div layout="row">
-        <md-card flex class="wz-md-card wz-metric-color">
+        <md-card flex class="wz-md-card euiCard wz-metric-color">
             <md-card-content layout="row" class="wz-padding-metric">
                 <div flex>Critical severity alerts: <span class="wz-text-bold" ng-bind="vulnCritical()"></span></div>
                 <div flex>High severity alerts: <span class="wz-text-bold" ng-bind="vulnHigh()"></span></div>
@@ -23,7 +23,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-300">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(0)">
                 <span class="wz-headline-title">Alerts severity over time</span>
@@ -32,12 +32,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-vulnerability-Alerts-severity-over-time"
                     vis-id="'Wazuh-App-Agents-vulnerability-Alerts-severity-over-time'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(1)">
                 <span class="wz-headline-title">Most common rules</span>
@@ -46,13 +46,13 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Agents-vulnerability-Most-common-rules'"></kbn-vis>
             </md-card-content>
         </md-card>
     </div>
     <div layout="row" layout-align="center stretch" class="height-270">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(2)">
                 <span class="wz-headline-title">Most common CVEs</span>
@@ -61,12 +61,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-vulnerability-Vulnerability-Most-common-CVEs"
                     vis-id="'Wazuh-App-Agents-vulnerability-Vulnerability-Most-common-CVEs'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[3]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[3]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(3)">
                 <span class="wz-headline-title">Severity distribution</span>
@@ -75,12 +75,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-vulnerability-Vulnerability-severity-distribution"
                     vis-id="'Wazuh-App-Agents-vulnerability-Vulnerability-severity-distribution'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[4]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[4]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(4)">
                 <span class="wz-headline-title">Commonly affected packages</span>
@@ -89,7 +89,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-vulnerability-Commonly-affected-packages"
                     vis-id="'Wazuh-App-Agents-vulnerability-Commonly-affected-packages'"></kbn-vis>
             </md-card-content>
@@ -97,7 +97,7 @@
     </div>
 
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[5]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[5]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="expand(5)">
                 <span class="wz-headline-title">Alert summary</span>
@@ -106,7 +106,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Agents-vulnerability-Alert-summary'"></kbn-vis>
             </md-card-content>
         </md-card>

@@ -45,8 +45,8 @@
     <div layout="column" layout-align="start" ng-show="!editingFile">
 
         <div layout="row" class="wz-padding-left-8 wz-padding-right-8">
-            <md-card flex class="wz-md-card" ng-if="currentRule.details">
-                <md-card-content>
+            <md-card flex class="wz-md-card euiCard" ng-if="currentRule.details">
+                <md-card-content class="euiCard__content">
                     <span class="wz-headline-title">
                         <react-component name="EuiIcon" props="{type:'editorUnorderedList'}" /> Details
                     </span>
@@ -77,8 +77,8 @@
                 </md-card-content>
             </md-card>
 
-            <md-card flex class="wz-md-card" ng-if="currentRule.groups.length">
-                <md-card-content>
+            <md-card flex class="wz-md-card euiCard" ng-if="currentRule.groups.length">
+                <md-card-content class="euiCard__content">
                     <span class="wz-margin-top-10 wz-headline-title">
                         <react-component name="EuiIcon" props="{type:'kqlSelector'}" /> Groups
                     </span>
@@ -98,8 +98,8 @@
                 </md-card-content>
             </md-card>
 
-            <md-card flex class="wz-md-card" ng-if="currentRule.pci.length || currentRule.gdpr.length">
-                <md-card-content>
+            <md-card flex class="wz-md-card euiCard" ng-if="currentRule.pci.length || currentRule.gdpr.length">
+                <md-card-content class="euiCard__content">
                     <span class="wz-margin-top-10 wz-headline-title">
                         <react-component name="EuiIcon" props="{type:'controlsHorizontal'}" /> Compliance
                     </span>
@@ -143,8 +143,8 @@
                 </h1>
             </div>
             <div layout="row" ng-if="currentRule">
-                <md-card flex class="wz-md-card _md flex md-margin-h">
-                    <md-card-content>
+                <md-card flex class="wz-md-card euiCard _md flex md-margin-h">
+                    <md-card-content class="euiCard__content">
                         <wz-table custom-columns="true" flex path="'/rules'"
                             implicit-filter="[{ name:'file',value: currentRule.file}]"
                             keys="[{value: 'id', width: '75px'},{value:'file',size:2},{value:'description',size:2},{value:'groups',nosortable:true,size:2},{value:'pci',nosortable:true,size:2},{value:'gdpr',nosortable:true},'level']"

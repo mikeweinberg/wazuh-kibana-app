@@ -13,6 +13,7 @@
 import template from './wz-xml-file-editor.html';
 import CodeMirror from '../../utils/codemirror/lib/codemirror';
 import { uiModules } from 'ui/modules';
+import chrome from 'ui/chrome';
 
 const app = uiModules.get('app/wazuh', []);
 
@@ -41,6 +42,7 @@ app.directive('wzXmlFileEditor', function() {
     ) {
       $scope.targetNameShown = $scope.targetName;
       $scope.configError = false;
+      const IS_DARK_THEME = chrome.getUiSettingsClient().get('theme:darkMode');
       /**
        * Custom .replace method. Instead of using .replace which
        * evaluates regular expressions.
@@ -336,7 +338,7 @@ app.directive('wzXmlFileEditor', function() {
           matchClosing: true,
           matchBrackets: true,
           mode: 'text/xml',
-          theme: 'ttcn',
+          theme: IS_DARK_THEME ? 'lesser-dark' : 'ttcn',
           foldGutter: true,
           styleSelectedText: true,
           gutters: ['CodeMirror-foldgutter']

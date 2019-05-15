@@ -25,7 +25,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-250">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[0]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(0)">
                 <span class="wz-headline-title">Groups</span>
                 <span flex></span>
@@ -33,11 +33,11 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Audit-Groups" vis-id="'Wazuh-App-Agents-Audit-Groups'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[1]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(1)">
                 <span class="wz-headline-title">Commands</span>
                 <span flex></span>
@@ -45,12 +45,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Audit-Commands" vis-id="'Wazuh-App-Agents-Audit-Commands'">
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[2]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[2]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(2)">
                 <span class="wz-headline-title">Files</span>
                 <span flex></span>
@@ -58,14 +58,14 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Audit-Files" vis-id="'Wazuh-App-Agents-Audit-Files'"></kbn-vis>
             </md-card-content>
         </md-card>
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-310">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[3]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[3]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(3)">
                 <span class="wz-headline-title">Alerts over time</span>
                 <span flex></span>
@@ -73,7 +73,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Agents-Audit-Alerts-over-time"
                     vis-id="'Wazuh-App-Agents-Audit-Alerts-over-time'"></kbn-vis>
             </md-card-content>
@@ -81,7 +81,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': expandArray[4]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': expandArray[4]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis" ng-dblclick="expand(4)">
                 <span class="wz-headline-title">Alerts summary</span>
                 <span flex></span>
@@ -89,7 +89,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Agents-Audit-Last-alerts'"></kbn-vis>
             </md-card-content>
         </md-card>

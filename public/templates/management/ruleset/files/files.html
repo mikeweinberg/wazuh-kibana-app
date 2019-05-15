@@ -35,7 +35,7 @@
     </div>
 
     <div layout="row">
-        <md-card flex class="wz-md-card _md flex md-margin-h">
+        <md-card flex class="wz-md-card euiCard _md flex md-margin-h">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions wz-card-actions-top">
                 <a ng-if="adminMode" ng-click="filesctrl.addNewFile(mctrl.globalRulesetTab)">Add
                     new {{mctrl.globalRulesetTab}} file</a>
@@ -43,7 +43,7 @@
                 <wz-kbn-switch class="md-primary wz-no-top-bottom-margin" switch-model="mctrl.onlyLocalFiles"
                     switch-text="Editable files"></wz-kbn-switch>
             </md-card-actions>
-            <md-card-content>
+            <md-card-content class="euiCard__content">
                 <wz-table ng-if="filesctrl.filesSubTab === 'rules' && mctrl.onlyLocalFiles" flex path="'/rules/files'"
                     implicit-filter="[{name: 'path', value: 'etc/rules'}]" keys="[{value: 'file', width: '25%'}]"
                     allow-click="true" row-sizes="[16,13,11]" />

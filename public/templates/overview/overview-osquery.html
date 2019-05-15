@@ -13,7 +13,7 @@
         <kbn-vis vis-id="'Wazuh-App-Overview-Osquery-Agents-reporting'"></kbn-vis>
     </div>
     <div layout="row" class="height-300">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="octrl.expand(0)">
                 <span class="wz-headline-title">Top 5 Osquery events added</span>
@@ -22,12 +22,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-Osquery-Top-5-added" vis-id="'Wazuh-App-Overview-Osquery-Top-5-added'">
             </md-card-content>
         </md-card>
 
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="octrl.expand(1)">
                 <span class="wz-headline-title">Top 5 Osquery events removed</span>
@@ -36,14 +36,14 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-Osquery-Top-5-removed"
                     vis-id="'Wazuh-App-Overview-Osquery-Top-5-removed'">
             </md-card-content>
         </md-card>
 
-        <md-card flex="50" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="50" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(2)">
                     <span class="wz-headline-title">Evolution of Osquery events per pack over time</span>
                     <span flex></span>
@@ -58,8 +58,8 @@
     </div>
 
     <div layout="row" class="height-300">
-        <md-card flex="30" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="30" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[3]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(3)">
                     <span class="wz-headline-title">Most common packs</span>
                     <span flex></span>
@@ -71,8 +71,8 @@
                 <kbn-vis id="Wazuh-App-Overview-Osquery-Most-common-packs" vis-id="'Wazuh-App-Overview-Osquery-Most-common-packs'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[4]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(4)">
                     <span class="wz-headline-title">Top 5 rules</span>
                     <span flex></span>
@@ -87,7 +87,7 @@
     </div>
     
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[5]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[5]}">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions-vis"
                 ng-dblclick="octrl.expand(5)">
                 <span class="wz-headline-title">Alerts summary</span>
@@ -96,7 +96,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Overview-Osquery-Alerts-summary'">
             </md-card-content>
         </md-card>

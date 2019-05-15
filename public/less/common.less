@@ -172,6 +172,15 @@
   background: #fafcfe;
 }
 
+.euiTitle .euiIcon {
+  vertical-align: baseline !important;
+}
+
+.euiTableRow .euiTableRowCell,
+.euiTableRow .euiTableHeaderCell {
+  padding: 4px;
+}
+
 /* Custom Manager/Status styles */
 
 .status {
@@ -401,6 +410,7 @@
   margin: 3px 8px;
   box-shadow: none !important;
   border: 1px solid #dfeff8;
+  font-size: 14px;
 }
 
 .wz-background-transparent {
@@ -537,7 +547,7 @@ md-sidenav {
 
 /* Card and select input shadow overriding */
 
-.wz-md-card:not(.wz-metric-color) {
+.wz-md-card:not(.wz-metric-color):not(.euiCard) {
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1) !important;
   border: 1px solid #d3dae6 !important;
   overflow: hidden;
@@ -561,6 +571,13 @@ md-sidenav {
   margin: 0px 15px;
   border-bottom: 1px solid #d3dae6;
   padding: 16px 0px;
+}
+
+.euiCard__top.wz-card-actions-top {
+  margin: -15px;
+  padding: 15px;
+  background: #ecf6fb;
+  width: calc(~'100% + 30px');
 }
 
 md-switch.md-default-theme .md-thumb,
@@ -716,6 +733,10 @@ md-switch.md-checked .md-thumb {
   padding-top: 10px !important;
 }
 
+.md-padding-top-20 {
+  padding-top: 20px !important;
+}
+
 .md-padding-h {
   padding: 0px 16px;
 }
@@ -849,6 +870,7 @@ md-switch.md-checked .md-thumb {
 }
 wz-xml-file-editor {
   height: inherit;
+  font-size: 14px;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -990,4 +1012,8 @@ wz-xml-file-editor {
   padding: 5px;
   background-color: #0079a5;
   white-space: nowrap;
+}
+
+.euiText.euiText--small {
+  line-height: 1.2rem;
 }

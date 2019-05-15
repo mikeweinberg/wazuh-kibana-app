@@ -6,8 +6,8 @@
 <!-- End no configuration section -->
 
 <!-- Ignored card -->
-<md-card class="wz-md-card" ng-if="((agent || {}).os || {}).platform !== 'windows' && !JSONContent && !XMLContent && configurationSubTab === 'fim-ignored' && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && currentConfig['syscheck-syscheck'].syscheck.ignore && currentConfig['syscheck-syscheck'].syscheck.ignore.length">
-    <md-card-content>
+<md-card class="wz-md-card euiCard" ng-if="((agent || {}).os || {}).platform !== 'windows' && !JSONContent && !XMLContent && configurationSubTab === 'fim-ignored' && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && currentConfig['syscheck-syscheck'].syscheck.ignore && currentConfig['syscheck-syscheck'].syscheck.ignore.length">
+    <md-card-content class="euiCard__content">
         <div layout="row" layout-align="start center">
             <div>
                 <span class="font-size-16">Ignored files and directories</span>
@@ -49,8 +49,8 @@
 <!-- End no configuration section -->
 
 
-<md-card class="wz-md-card" ng-if="((agent || {}).os || {}).platform === 'windows' && configurationSubTab === 'fim-ignored' && !JSONContent && !XMLContent && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && (currentConfig['syscheck-syscheck'].syscheck.registry || currentConfig['syscheck-syscheck'].syscheck.registry_ignore)">
-    <md-card-content>
+<md-card class="wz-md-card euiCard" ng-if="((agent || {}).os || {}).platform === 'windows' && configurationSubTab === 'fim-ignored' && !JSONContent && !XMLContent && currentConfig && currentConfig['syscheck-syscheck'] && currentConfig['syscheck-syscheck'].syscheck && (currentConfig['syscheck-syscheck'].syscheck.registry || currentConfig['syscheck-syscheck'].syscheck.registry_ignore)">
+    <md-card-content class="euiCard__content">
         <div layout="row" layout-align="start center">
             <div>
                 <span class="font-size-16">Ignored</span>

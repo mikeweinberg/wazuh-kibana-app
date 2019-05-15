@@ -1,3 +1,10 @@
+body.md-default-theme,
+body,
+html.md-default-theme,
+html {
+  color: #dfe5ef !important;
+}
+
 .euiHeaderSectionItem__button,
 .euiListGroupItem__icon {
   color: #dfe5ef;
@@ -9,6 +16,12 @@
 
 .app-wrapper-panel {
   background-color: #1a1b20;
+}
+
+md-content.md-default-theme,
+md-content {
+  background-color: #1a1b20;
+  color: #c8dad9;
 }
 
 .wz-metric-color {
@@ -37,4 +50,55 @@
 
 .wz-menu-button:not([disabled]):hover {
   background-color: #013343;
+}
+
+.wzXmlEditor {
+  background: #1d1e24;
+  border: 1px solid #343741;
+  color: #c8dad9;
+}
+
+.CodeMirror {
+  border-top: 1px solid #5c606f;
+}
+
+.wz-select-input {
+  border: none !important;
+}
+
+.euiCard__top.wz-card-actions-top {
+  background: #272931;
+}
+
+.table {
+  color: #dfe5ef !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #1a1b21;
+  color: #dfe5ef !important;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: rgba(27, 169, 245, 0.05) !important;
+}
+
+#wz-search-filter-bar {
+  background: #16171c;
+  color: #dfe5ef;
+}
+
+#wz-search-filter-bar-input{
+  box-shadow: none;
+}
+
+.kuiLocalSearchInput, .kuiLocalSearchInput:focus {
+  border: 1px solid #343741 !important;
+}
+
+.btn-info {
+  border: 1px solid #343741 !important;
+}
+
+.table-resizable > thead th:not(:first-child) {
+  border-left: 1px dashed #343741;
 }

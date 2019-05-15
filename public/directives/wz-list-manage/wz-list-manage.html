@@ -15,14 +15,14 @@
     </div>
     <div layout="row" ng-class="hideClose ? ['wz-padding-left-8', 'wz-padding-right-8'] : ['wz-padding-top-14']"
         layout-align="start stretch">
-        <md-card flex class="wz-md-card" ng-class="{ 'wz-no-margin' : !hideClose }">
+        <md-card flex class="wz-md-card euiCard" ng-class="{ 'wz-no-margin' : !hideClose }">
             <div layout="row" ng-if="restartBtn" class="extraHeaderInfo">
                 <span><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;
                     Changes will not take effect until a restart is performed.</span>
                 <span flex></span>
                 <span class="cursor-pointer" ng-click="restart()">Restart now</span>
             </div>
-            <md-card-content>
+            <md-card-content class="euiCard__content">
                 <div layout="row">
                     <input placeholder="Filter entries..." ng-model="searchTerm" ng-change="filterTable()" type="text"
                         class="kuiLocalSearchInput ng-empty ng-pristine ng-scope ng-touched ng-valid height-40">

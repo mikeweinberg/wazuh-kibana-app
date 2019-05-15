@@ -19,8 +19,8 @@
         ng-if="(currentConfig['analysis-global'] && currentConfig['analysis-global'].global) || (currentConfig['com-logging'] && currentConfig['com-logging'].logging)">
 
         <!-- The main card will all the settings -->
-        <md-card class="wz-md-card" ng-if="!JSONContent && !XMLContent && !editingFile">
-            <md-card-content>
+        <md-card class="wz-md-card euiCard" ng-if="!JSONContent && !XMLContent && !editingFile">
+            <md-card-content class="euiCard__content">
                 <div layout="row" layout-align="start center">
                     <div>
                         <span class="font-size-16">Main settings</span>

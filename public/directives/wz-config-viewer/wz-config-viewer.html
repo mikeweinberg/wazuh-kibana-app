@@ -1,6 +1,6 @@
 <div layout="row" ng-show="jsoncontent || xmlcontent" class="configViewer">
     <!-- JSON card -->
-    <md-card flex="auto" class="wz-md-card" ng-show="jsoncontent" ng-class="hideHeader ? ['wz-no-margin'] : ''">
+    <md-card flex="auto" class="wz-md-card euiCard" ng-show="jsoncontent" ng-class="hideHeader ? ['wz-no-margin'] : ''">
         <md-card-content flex layout="column" ng-class="hideHeader ? ['wz-no-padding'] : ''">
             <div ng-hide="hideHeader">
                 <div layout="row" layout-align="start center">
@@ -29,7 +29,7 @@
     <!-- End JSON card -->
 
     <!-- XML card -->
-    <md-card flex="auto" class="wz-md-card" ng-show="xmlcontent" ng-class="hideHeader ? ['wz-no-margin'] : ''">
+    <md-card flex="auto" class="wz-md-card euiCard" ng-show="xmlcontent" ng-class="hideHeader ? ['wz-no-margin'] : ''">
         <md-card-content flex layout="column" ng-class="hideHeader ? ['wz-no-padding'] : ''">
             <div ng-hide="hideHeader">
                 <div layout="row" layout-align="start center">

@@ -1,8 +1,8 @@
 <md-content flex layout="column" ng-if="octrl.tab === 'aws' && octrl.tabView === 'panels'"
     ng-class="{'no-opacity': resultState !== 'ready' || !rendered}" layout-align="start">
     <div layout="row" class="height-250">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(0)">
                     <span class="wz-headline-title">Sources</span>
                     <span flex></span>
@@ -15,8 +15,8 @@
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(1)">
                     <span class="wz-headline-title">Accounts</span>
                     <span flex></span>
@@ -29,8 +29,8 @@
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(2)">
                     <span class="wz-headline-title">S3 buckets</span>
                     <span flex></span>
@@ -43,8 +43,8 @@
                 </kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[3]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(3)">
                     <span class="wz-headline-title">Regions</span>
                     <span flex></span>
@@ -60,8 +60,8 @@
     </div>
 
     <div layout="row" class="height-300">
-        <md-card flex="50" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="50" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[4]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(4)">
                     <span class="wz-headline-title">Events by source over time</span>
                     <span flex></span>
@@ -74,8 +74,8 @@
                     vis-id="'Wazuh-App-Overview-AWS-Events-by-source'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex="50" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[5]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex="50" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[5]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(5)">
                     <span class="wz-headline-title">Events by S3 bucket over time</span>
                     <span flex></span>
@@ -91,8 +91,8 @@
     </div>
 
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[6]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[6]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(6)">
                     <span class="wz-headline-title">Geolocation map</span>
                     <span flex></span>
@@ -107,8 +107,8 @@
     </div>
 
     <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[7]}">
-            <md-card-content class="wazuh-column">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[7]}">
+            <md-card-content class="euiCard__content wazuh-column">
                 <div layout="row" ng-dblclick="octrl.expand(7)">
                     <span class="wz-headline-title">Top rules</span>
                     <span flex></span>

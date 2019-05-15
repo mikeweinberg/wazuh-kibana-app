@@ -63,8 +63,8 @@
 
     <!-- Daemons status section -->
     <div ng-show="!ctrl.load && !ctrl.clusterError">
-        <md-card flex class="wz-md-card">
-            <md-card-content class="daemons-card">
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content daemons-card">
                 <div ng-repeat="daemon in ctrl.daemons" class="daemon-label">
                     <p ng-class="ctrl.getDaemonStatusClass(daemon.value)" class="round daemon-bullet"></p>
                     <p class="daemon-name">{{daemon.key}}</p>
@@ -100,8 +100,8 @@
 
     <div layout="row" layout-align="start stretch" layout-wrap ng-if="!ctrl.load && !ctrl.clusterError">
         <!-- Manager information section -->
-        <md-card flex class="wz-md-card">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard">
+            <md-card-content class="euiCard__content">
                 <i class="fa fa-fw fa-server" aria-hidden="true"></i> <span ng-if="ctrl.selectedNode"
                     class="wz-headline-title">{{ctrl.selectedNode}}
                     information</span> <span ng-if="!ctrl.selectedNode" class="wz-headline-title">Manager
@@ -143,8 +143,8 @@
         <!-- End manager information section -->
 
         <!-- Last registered agent section -->
-        <md-card flex class="wz-md-card" ng-show="ctrl.agentInfo && ctrl.agentInfo.id !== '000'">
-            <md-card-content>
+        <md-card flex class="wz-md-card euiCard" ng-show="ctrl.agentInfo && ctrl.agentInfo.id !== '000'">
+            <md-card-content class="euiCard__content">
                 <i class="fa fa-fw fa-tv" aria-hidden="true"></i> <span class="wz-headline-title">Last registered
                     agent</span>
                 <md-divider class="wz-margin-top-10"></md-divider>

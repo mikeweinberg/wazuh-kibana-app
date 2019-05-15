@@ -58,7 +58,7 @@
     </md-chips>
 
     <div layout="row" ng-if="!editingFile" class="wz-margin-top-16">
-        <md-card flex class="wz-md-card _md flex md-margin-h">
+        <md-card flex class="wz-md-card euiCard _md flex md-margin-h">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions wz-card-actions-top">
                 <a ng-if="adminMode" ng-click="mctrl.switchFilesSubTab('rules')">Manage
                     rules files</a>
@@ -66,7 +66,7 @@
                 <wz-kbn-switch class="md-primary wz-no-top-bottom-margin" switch-model="mctrl.showingLocalRules"
                     switch-text="Custom rules" switch-change="switchLocalRules()"></wz-kbn-switch>
             </md-card-actions>
-            <md-card-content class="wz-padding-bottom-0">
+            <md-card-content class="euiCard__content wz-padding-bottom-0">
                 <wz-table custom-columns="true" flex ng-if="mctrl.showingLocalRules" path="'/rules'"
                     keys="[{value: 'id', width: '85px'},{value:'description', width: 'auto'},{value:'groups',nosortable:true, width: '250px'},{value:'pci',nosortable:true, width: '170px'},{value:'gdpr',nosortable:true,width: '170px'}, {value: 'level', width: '100px'}, {value:'file',width: '200px'}]"
                     implicit-filter="appliedFilters" allow-click="true" row-sizes="[16,14,12]">

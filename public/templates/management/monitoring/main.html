@@ -2,8 +2,8 @@
 <div layout="row" layout-align="start stretch" class="wz-timelions" ng-if="!loading && !showConfig && !showNodes && isClusterEnabled && isClusterRunning">
 
     <!-- Overview card -->
-    <md-card flex class="wz-md-card">
-        <md-card-content>
+    <md-card flex class="wz-md-card euiCard">
+        <md-card-content class="euiCard__content">
             <i class="fa fa-fw fa-pie-chart" aria-hidden="true"></i> <span ng-click="goConfiguration()" class="wz-headline-title wz-text-link cursor-pointer">Overview</span>
             <md-divider class="wz-margin-top-10"></md-divider>
             <div layout="row" class="wz-padding-top-10">
@@ -23,8 +23,8 @@
     <!-- End overview card -->
 
     <!-- Info card -->
-    <md-card flex class="wz-md-card">
-        <md-card-content>
+    <md-card flex class="wz-md-card euiCard">
+        <md-card-content class="euiCard__content">
             <i class="fa fa-fw fa-info" aria-hidden="true"></i> <span class="wz-headline-title">Information</span>
             <md-divider class="wz-margin-top-10"></md-divider>
             <!-- Nodes -->

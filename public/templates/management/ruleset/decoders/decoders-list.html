@@ -38,14 +38,14 @@
     </md-chips>
 
     <div layout="row" class="wz-margin-top-16">
-        <md-card flex class="wz-md-card _md flex md-margin-h" ng-if="!dctrl.editingFile && !mctrl.filesSubTab">
+        <md-card flex class="wz-md-card euiCard _md flex md-margin-h" ng-if="!dctrl.editingFile && !mctrl.filesSubTab">
             <md-card-actions layout="row" layout-align="end center" class="wz-card-actions wz-card-actions-top">
                 <a ng-if="adminMode" ng-click="mctrl.switchFilesSubTab('decoders')">Manage decoders files</a>
                 <span flex></span>
                 <wz-kbn-switch class="md-primary wz-no-top-bottom-margin" switch-model="dctrl.showingLocalDecoders"
                     switch-text="Custom decoders" switch-change="dctrl.switchLocalDecoders()"></wz-kbn-switch>
             </md-card-actions>
-            <md-card-content class="wz-padding-bottom-0">
+            <md-card-content class="euiCard__content wz-padding-bottom-0">
                 <wz-table custom-columns="true" ng-if="!dctrl.showingLocalDecoders"
                     implicit-filter="dctrl.appliedFilters" flex path="'/decoders'"
                     keys="['name',{value:'details.program_name',size:2,nosortable:true},{value:'details.order',size:2,nosortable:true},'file']"

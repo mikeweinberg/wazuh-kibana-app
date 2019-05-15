@@ -2,7 +2,7 @@
     ng-class="{'no-opacity': resultState !== 'ready' || !rendered}" layout-align="start">
 
     <div layout="row" layout-align="center stretch">
-        <md-card flex class="wz-md-card">
+        <md-card flex class="wz-md-card euiCard">
             <md-tabs md-selected="selectedPciIndex" class="wz-md-tab" md-border-bottom md-dynamic-height
                 id="pciReq_tab">
                 <md-tab ng-repeat="tab in octrl.pciTabs" ng-disabled="tab.disabled" label="{{tab.title}}">
@@ -19,7 +19,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-400">
-        <md-card flex="70" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
+        <md-card flex="70" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[0]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(0)">
                 <span class="wz-headline-title">PCI requirements</span>
                 <span flex></span>
@@ -27,12 +27,12 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-PCI-DSS-requirements"
                     vis-id="'Wazuh-App-Overview-PCI-DSS-requirements'"></kbn-vis>
             </md-card-content>
         </md-card>
-        <md-card flex="30" class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
+        <md-card flex="30" class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[1]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(1)">
                 <span class="wz-headline-title">Top 10 agents by alerts number</span>
                 <span flex></span>
@@ -40,14 +40,14 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-PCI-DSS-Agents" vis-id="'Wazuh-App-Overview-PCI-DSS-Agents'"></kbn-vis>
             </md-card-content>
         </md-card>
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-300">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[2]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(2)">
                 <span class="wz-headline-title">Top requirements over time</span>
                 <span flex></span>
@@ -55,7 +55,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-PCI-DSS-Requirements-over-time"
                     vis-id="'Wazuh-App-Overview-PCI-DSS-Requirements-over-time'"></kbn-vis>
             </md-card-content>
@@ -63,7 +63,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-530">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[3]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(3)">
                 <span class="wz-headline-title">Last alerts</span>
                 <span flex></span>
@@ -71,7 +71,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-PCI-DSS-Requirements-Agents-heatmap"
                     vis-id="'Wazuh-App-Overview-PCI-DSS-Requirements-Agents-heatmap'">
                 </kbn-vis>
@@ -80,7 +80,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-255">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[4]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(4)">
                 <span class="wz-headline-title">Requirements by agent</span>
                 <span flex></span>
@@ -88,7 +88,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis id="Wazuh-App-Overview-PCI-DSS-Requirements-by-agent"
                     vis-id="'Wazuh-App-Overview-PCI-DSS-Requirements-by-agent'"></kbn-vis>
             </md-card-content>
@@ -96,7 +96,7 @@
     </div>
 
     <div layout="row" layout-align="center stretch" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[5]}">
+        <md-card flex class="wz-md-card euiCard" ng-class="{'fullscreen': octrl.expandArray[5]}">
             <md-card-actions layout="row" class="wz-card-actions-vis" ng-dblclick="octrl.expand(5)">
                 <span class="wz-headline-title">Alerts summary</span>
                 <span flex></span>
@@ -104,7 +104,7 @@
                     <react-component name="EuiIcon" props="{type:'expand'}" />
                 </span>
             </md-card-actions>
-            <md-card-content class="wazuh-column">
+            <md-card-content class="euiCard__content wazuh-column">
                 <kbn-vis vis-id="'Wazuh-App-Overview-PCI-DSS-Alerts-summary'"></kbn-vis>
             </md-card-content>
         </md-card>
