@@ -2,10 +2,10 @@
     <div flex-gt-md="30" class="wz-configuration-label">
         {{ label }}
     </div>
-    <div ng-if="!isArray" flex-gt-md="50" class="wz-configuration-value">
+    <div ng-if="!isArray" flex-gt-md="50" class="euiFieldText wz-configuration-value">
         {{ value }}
     </div>
-    <div ng-if="isArray" flex-gt-md="50" class="wz-configuration-value">
+    <div ng-if="isArray" flex-gt-md="50" class="euiTextArea wz-configuration-value">
         <ul>
             <li ng-repeat="item in value">{{ item }}</li>
         </ul>

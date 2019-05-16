@@ -81,7 +81,7 @@
 
             <div ng-if="mctrl.editionTab !== 'editconfiguration' && mctrl.clusterInfo.status === 'enabled'"
                 class="height-35 layout-align-center-stretch layout-column wz-margin-right-8 wz-select-input">
-                <select class="kuiSelect wz-border-none cursor-pointer" ng-model="mctrl.selectedNode"
+                <select class="euiSelect wz-border-none cursor-pointer" ng-model="mctrl.selectedNode"
                     ng-change="mctrl.changeNode(mctrl.selectedNode)">
                     <option ng-repeat="node in mctrl.nodeList" value="{{node}}">{{node}}</option>
                 </select>

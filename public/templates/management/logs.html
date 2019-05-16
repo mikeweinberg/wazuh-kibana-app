@@ -4,7 +4,7 @@
     <div ng-show="!ctrl.loading" layout="row" layout-align="start center" class="md-padding-h wz-margin-top-16">
         <!-- Daemon selector -->
         <div flex="20" layout="column" layout-align="center" class="wz-margin-right-15 wz-select-input">
-            <select flex class="kuiSelect wz-border-none cursor-pointer height-35"
+            <select flex class="euiSelect wz-border-none cursor-pointer height-35"
                 ng-disabled="ctrl.realtime || !ctrl.daemons.length" id="categoryBox" ng-model="ctrl.category"
                 ng-change="ctrl.filter({name:'category',value:ctrl.category})" aria-label="Logs category">
                 <option value="all">All daemons</option>
@@ -16,7 +16,7 @@
 
         <!-- Level selector -->
         <div flex="20" layout="column" layout-align="center" class="wz-select-input wz-margin-right-15">
-            <select flex class="kuiSelect wz-border-none cursor-pointer height-35" ng-disabled="ctrl.realtime"
+            <select flex class="euiSelect wz-border-none cursor-pointer height-35" ng-disabled="ctrl.realtime"
                 id="levelBox" ng-model="ctrl.type_log" ng-change="ctrl.filter({name:'type_log',value:ctrl.type_log})"
                 aria-label="Logs level">
                 <option value="all">All log levels</option>
@@ -30,7 +30,7 @@
 
         <div flex="20" layout="column" ng-show="ctrl.nodeList" layout-align="center"
             class="wz-select-input wz-margin-right-15">
-            <select flex class="kuiSelect wz-border-none cursor-pointer height-35" ng-disabled="ctrl.realtime"
+            <select flex class="euiSelect wz-border-none cursor-pointer height-35" ng-disabled="ctrl.realtime"
                 id="categoryBox" ng-model="ctrl.selectedNode" ng-change="ctrl.changeNode(ctrl.selectedNode)"
                 aria-label="Logs category">
                 <option ng-repeat="node in ctrl.nodeList" value="{{node}}">{{node}}</option>

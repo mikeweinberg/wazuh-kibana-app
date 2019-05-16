@@ -31,14 +31,4 @@ if (IS_DARK_THEME) {
   newSS.rel = 'stylesheet';
   newSS.href = '../plugins/wazuh/less/dark_theme/wz_theme_dark.css';
   document.getElementsByTagName('head')[0].appendChild(newSS);
-
-/*   newSS = document.createElement('link');
-  newSS.rel = 'stylesheet';
-  newSS.href = '../plugins/wazuh/less/dark_theme/bootstrap_light.css';
-  document.getElementsByTagName('head')[0].appendChild(newSS);
-
-  newSS = document.createElement('link');
-  newSS.rel = 'stylesheet';
-  newSS.href = '../plugins/wazuh/less/dark_theme/kui_light.css';
-  document.getElementsByTagName('head')[0].appendChild(newSS); */
 }

@@ -35,9 +35,6 @@ md-content {
 .euiNavDrawerGroup__item .euiListGroupItem__label,
 .euiNavDrawer .euiNavDrawer__expandButton .euiListGroupItem__button {
   color: #dfe5ef;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Inter UI';
 }
 
 .wz-menu-content {
@@ -66,6 +63,14 @@ md-content {
   border: none !important;
 }
 
+.euiCard {
+  color: #dfe5ef;
+}
+
+.md-subheader.md-default-theme, .md-subheader {
+  color: #dfe5ef;
+}
+
 .euiCard__top.wz-card-actions-top {
   background: #272931;
 }
@@ -73,6 +78,7 @@ md-content {
 .table {
   color: #dfe5ef !important;
 }
+
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #1a1b21;
   color: #dfe5ef !important;
@@ -101,4 +107,21 @@ md-content {
 
 .table-resizable > thead th:not(:first-child) {
   border-left: 1px dashed #343741;
+}
+
+md-dialog.md-default-theme.md-content-overflow .md-actions, 
+md-dialog.md-content-overflow .md-actions, 
+md-dialog.md-default-theme.md-content-overflow md-dialog-actions, 
+md-dialog.md-content-overflow md-dialog-actions, 
+md-divider.md-default-theme, md-divider {
+  border-top-color: rgb(52, 55, 65);
+}
+
+.wz-item-detail {
+  border: 1px solid #343741;
+}
+
+.wz-item-list {
+  background-color: #16171c;
+  border: 1px solid #343741;
 }

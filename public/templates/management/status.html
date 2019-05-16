@@ -8,7 +8,7 @@
     <!-- Headline -->
     <div ng-show="!ctrl.load" layout="row" layout-padding class="wz-padding-bottom-0 wz-margin-top-16">
         <div ng-show="ctrl.selectedNode" layout="column" layout-align="center" class="height-35 wz-select-input">
-            <select class="kuiSelect wz-border-none cursor-pointer max-height-35" id="categoryBox"
+            <select class="euiSelect wz-border-none cursor-pointer max-height-35" id="categoryBox"
                 ng-model="ctrl.selectedNode" ng-change="ctrl.changeNode(ctrl.selectedNode)" aria-label="Select node">
                 <option ng-repeat="node in ctrl.nodes" value="{{node.name}}">{{node.name}}</option>
             </select>

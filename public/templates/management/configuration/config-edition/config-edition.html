@@ -31,7 +31,7 @@
                     <div ng-show="editctrl.selectedNode && editctrl.clusterStatus.data.data.enabled === 'yes' && editctrl.clusterStatus.data.data.running === 'yes'"
                         layout="row" layout-padding style="padding: 0;height: 32px;">
                         <div layout="column" layout-align="center" class="height-35 wz-select-input wz-margin-right-8">
-                            <select class="kuiSelect wz-border-none cursor-pointer max-height-35" id="categoryBox"
+                            <select class="euiSelect wz-border-none cursor-pointer max-height-35" id="categoryBox"
                                 ng-model="editctrl.selectedNode" ng-change="editctrl.changeNode()"
                                 ng-disabled="editctrl.xmlHasErrors || editctrl.doingSaving || editctrl.isRestarting || wazuhNotReadyYet"
                                 aria-label="Select node">
