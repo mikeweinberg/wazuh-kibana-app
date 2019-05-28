@@ -18,7 +18,7 @@ import * as FileSaver from '../../services/file-saver';
 
 const app = uiModules.get('app/wazuh', []);
 
-app.directive('wzListManage', function() {
+app.directive('wzListManage', function () {
   return {
     restrict: 'E',
     scope: {
@@ -42,7 +42,9 @@ app.directive('wzListManage', function() {
        */
       $scope.itemsPerPage = $scope.rowsPerPage || 10;
       $scope.pagedItems = [];
+      this.box = $('#listContent');
       $scope.currentPage = 0;
+      $scope.textBox = false;
       let items = [];
       $scope.gap = 0;
       const searchTable = () => pagination.searchTable($scope, items);
@@ -52,11 +54,11 @@ app.directive('wzListManage', function() {
       $scope.prevPage = () => pagination.prevPage($scope);
       $scope.nextPage = async currentPage =>
         pagination.nextPage(currentPage, $scope, errorHandler, null);
-      $scope.firstPage = function() {
+      $scope.firstPage = function () {
         $scope.setPage(1);
         $scope.prevPage();
       };
-      $scope.setPage = function(page = false) {
+      $scope.setPage = function (page = false) {
         this.n = page || this.n;
         $scope.currentPage = this.n;
         $scope.nextPage(this.n);
@@ -102,6 +104,49 @@ app.directive('wzListManage', function() {
           fetch();
         }
       });
+
+      $scope.switchTextBox = () => {
+        const isShown = $scope.textBox;
+        if (isShown) {
+          $scope.textBox = false;
+          copyBoxtoList();
+        } else {
+          $scope.textBox = true;
+          copyListToBox();
+        }
+
+      }
+
+      const copyListToBox = () => {
+        try {
+          this.box.val('');
+          $scope.items.map((i, idx) => {
+            this.box.val(`${this.box.val()}${idx !== 0 ? '\n' : ''}${i.join(':')}`);
+          })
+        } catch (error) {
+          errorHandler.handle(error || 'Cannot bind content.');
+        }
+      }
+
+      const copyBoxtoList = () => {
+        try {
+          const content = this.box.val().split('\n');
+          const newContent = {};
+          content.map(line => {
+            if (line) {
+              const [key, val] = line.split(':');
+              if (key) {
+                newContent[key] = val;
+              }
+            }
+          })
+          $scope.currentList.list = newContent;
+          fetch();
+          $scope.$applyAsync();
+        } catch (error) {
+          errorHandler.handle(error || 'Cannot bind content.');
+        }
+      }
 
       $scope.saveList = async () => {
         $scope.doingSaving = true;
@@ -178,6 +223,7 @@ app.directive('wzListManage', function() {
         if (!$scope.currentList.list[key]) {
           $scope.currentList.list[key] = value ? value : '';
           fetch();
+          $scope.$applyAsync();
         } else {
           errorHandler.handle('Entry already exists');
         }
@@ -209,6 +255,7 @@ app.directive('wzListManage', function() {
         $scope.currentList.editingNewValue = '';
         $scope.cancelEditingKey();
         fetch();
+        $scope.$applyAsync();
       };
 
       $scope.cancelRemoveEntry = () => {
@@ -220,9 +267,9 @@ app.directive('wzListManage', function() {
         delete $scope.currentList.list[key];
         $scope.removingEntry = false;
         fetch();
-        $scope.setPage(
-          $scope.pagedItems.length - 1 >= $scope.n ? page : page - 1
-        );
+        $scope.$applyAsync();
+        const p = $scope.pagedItems.length - 1 >= $scope.n ? page : page - 1;
+        p > 0 ? $scope.setPage(p) : $scope.firstPage();
       };
 
       const showRestartMessage = async msg => {
