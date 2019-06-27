@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
+  EuiIcon,
   EuiButton,
   EuiButtonEmpty,
   EuiFieldText,
@@ -24,6 +25,12 @@ export class SaveSearch extends Component {
     };
   }
 
+  initVarsAgain() {
+    Object.keys(this.state).map(k => {
+      this.state[k] = false;
+    });
+  }
+
   closeModal() {
     this.setState({ isModalVisible: false });
   }
@@ -40,16 +47,14 @@ export class SaveSearch extends Component {
     try {
       //TODO save the search
       if (this.state.searchName) {
-        window.alert(`${this.state.searchName} will be saved`);
-        this.setState({ isModalVisible: false });
-        this.setState({ searchName: false });
-        console.log('search: ', this.props.query)
+        this.props.savedSearch()
+        this.closeModal()
       } else {
-        window.alert('Cannot save withou a name.')
+        this.setState({ noSearchName: true });
       }
-
+      //this.initVarsAgain()
     } catch (error) {
-      console.error('Cannot save the search ', error);
+      this.props.handleError(error)
     }
   }
 
@@ -58,7 +63,6 @@ export class SaveSearch extends Component {
     this.setState({ searchName: e.target.value });
   };
 
-  
   render() {
 
     const form = (
@@ -69,7 +73,15 @@ export class SaveSearch extends Component {
       </EuiForm>
     );
 
+    let noSearchNameSet;
     let modal;
+    
+    if (this.state.noSearchName) {
+      noSearchNameSet = (
+        <div class="noSearchName">
+          <p><EuiIcon type="alert" />&nbsp;Please insert a name to save the search.</p>
+        </div>)
+    }
 
     if (this.state.isModalVisible) {
       modal = (
@@ -80,7 +92,7 @@ export class SaveSearch extends Component {
             </EuiModalHeader>
 
             <EuiModalBody>{form}</EuiModalBody>
-
+            {noSearchNameSet}
             <EuiModalFooter>
               <EuiButtonEmpty onClick={() => this.closeModal()}>Cancel</EuiButtonEmpty>
               <EuiButton onClick={() => this.saveSearch()} fill>
@@ -107,5 +119,6 @@ export class SaveSearch extends Component {
 }
 
 SaveSearch.propTypes = {
-  query: PropTypes.string
+  savedSearch: PropTypes.func,
+  handleError: PropTypes.func
 };

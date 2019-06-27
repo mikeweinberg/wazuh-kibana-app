@@ -138,7 +138,8 @@ function discoverController(
   getAppState,
   globalState,
   loadedVisualizations,
-  discoverPendingUpdates
+  discoverPendingUpdates,
+  errorHandler
 ) {
   const visualizeLoader = Private(VisualizeLoaderProvider);
   let visualizeHandler;
@@ -608,6 +609,21 @@ function discoverController(
     $state.query = query;
     $scope.fetch();
   };
+
+  // Handle error binded to react
+  $scope.handleError = (err) => {
+    errorHandler.handle(err)
+  }
+
+  // Saves the query
+  $scope.savedSearch = () => {
+    const search = $('wz-search-bar input').val()
+    if (search) {
+      errorHandler.info('Search saved.')
+    } else {
+      errorHandler.handle('Please enter a search in order to save it.')
+    }
+  }
 
   function handleSegmentedFetch(segmented) {
     function flushResponseData() {
