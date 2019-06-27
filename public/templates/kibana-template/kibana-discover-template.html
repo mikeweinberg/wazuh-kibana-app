@@ -29,7 +29,7 @@
     <div data-transclude-slots>
       <!-- Search. -->
       <div ng-show="tabView !== 'cluster-monitoring'" style="padding-top: 10px;" data-transclude-slot="bottomRow" class="fullWidth">
-        <react-component name="SaveSearch"/>
+        <react-component name="SaveSearch" props="{query: state.query.query}"/>
         <wz-search-bar
           query="state.query"
           on-query-submit="updateQueryAndFetch"

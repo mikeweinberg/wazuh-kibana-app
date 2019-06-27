@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   EuiButton,
   EuiButtonEmpty,
@@ -42,6 +43,7 @@ export class SaveSearch extends Component {
         window.alert(`${this.state.searchName} will be saved`);
         this.setState({ isModalVisible: false });
         this.setState({ searchName: false });
+        console.log('search: ', this.props.query)
       } else {
         window.alert('Cannot save withou a name.')
       }
@@ -56,7 +58,7 @@ export class SaveSearch extends Component {
     this.setState({ searchName: e.target.value });
   };
 
-
+  
   render() {
 
     const form = (
@@ -103,3 +105,7 @@ export class SaveSearch extends Component {
     );
   }
 }
+
+SaveSearch.propTypes = {
+  query: PropTypes.string
+};
